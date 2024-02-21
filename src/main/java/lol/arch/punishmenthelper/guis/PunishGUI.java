@@ -7,7 +7,6 @@ import lol.arch.punishmenthelper.utils.exceptions.GuiButtonException;
 import lol.arch.punishmenthelper.utils.gui.GuiButtonType;
 import lol.arch.punishmenthelper.utils.gui.GuiHelper;
 import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
 

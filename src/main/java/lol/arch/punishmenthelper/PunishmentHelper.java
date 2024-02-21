@@ -5,7 +5,6 @@ import lol.arch.punishmenthelper.commands.PunishCommand;
 import lol.arch.punishmenthelper.commands.ReloadCommand;
 import lol.arch.punishmenthelper.config.Config;
 import lol.arch.punishmenthelper.config.Menus;
-import lol.arch.punishmenthelper.guis.PunishGUI;
 import lol.arch.punishmenthelper.utils.BasicConfig;
 
 import lol.arch.punishmenthelper.utils.commands.CommandManager;

@@ -2,10 +2,8 @@ package lol.arch.punishmenthelper.utils.gui;
 
 import fr.mrmicky.fastinv.FastInv;
 import lol.arch.punishmenthelper.utils.BasicConfig;
-import lol.arch.punishmenthelper.utils.Sound;
 import lol.arch.punishmenthelper.utils.exceptions.GuiButtonException;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
