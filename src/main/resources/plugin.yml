@@ -1,0 +1,3 @@
+name: PunishmentHelper
+version: '${version}'
+main: lol.arch.punishmenthelper.PunishmentHelper

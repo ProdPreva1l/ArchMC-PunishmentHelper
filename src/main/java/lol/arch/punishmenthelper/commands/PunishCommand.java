@@ -1,0 +1,39 @@
+package lol.arch.punishmenthelper.commands;
+
+import lol.arch.punishmenthelper.config.Config;
+import lol.arch.punishmenthelper.guis.PunishGUI;
+import lol.arch.punishmenthelper.utils.Text;
+import lol.arch.punishmenthelper.utils.commands.Command;
+import lol.arch.punishmenthelper.utils.commands.CommandArgs;
+import lol.arch.punishmenthelper.utils.commands.CommandArguments;
+import lol.arch.punishmenthelper.utils.exceptions.GuiButtonException;
+import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
+
+public class PunishCommand extends Command {
+    @CommandArgs(name = "punish", permission = "punish.use", async = true)
+    public void execute(CommandArguments command) {
+        Player sender = command.getPlayer();
+        String toPunish = command.getArgs().length != 0 ? command.getArgs()[0] : null;
+
+        if (toPunish == null) {
+            sender.sendMessage(Text.message("&cUsage: &7/punish <player>"));
+            return;
+        }
+
+        OfflinePlayer target = Bukkit.getOfflinePlayer(toPunish);
+        if (target.getPlayer() != null) {
+            if (target.getPlayer().hasPermission("litebans.exempt")) {
+                sender.sendMessage(Text.message(Config.ERROR_PLAYER_NONPUNISHABLE.toString(), target.getPlayer().getName()));
+                return;
+            }
+        }
+
+        try {
+            new PunishGUI(sender, toPunish).open(sender);
+        } catch (GuiButtonException e) {
+            e.printStackTrace();
+        }
+    }
+}

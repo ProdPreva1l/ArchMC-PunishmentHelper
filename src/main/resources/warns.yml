@@ -1,0 +1,13 @@
+false-report:
+  offence-1:
+    reason: "False Report (1st Offence)"
+    silent: true
+    type: "warn"
+  offence-2:
+    reason: "False Report (2nd Offence)"
+    silent: true
+    type: "warn"
+  offence-3:
+    reason: "False Report (3rd Offence)"
+    silent: true
+    type: "warn"

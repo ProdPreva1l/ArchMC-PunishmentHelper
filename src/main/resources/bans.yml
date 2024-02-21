@@ -1,0 +1,36 @@
+reasons:
+  - "cheating"
+  - "innap-name"
+
+
+cheating:
+  gui-item: "DIAMOND_SWORD"
+  gui-name: "&cCheating"
+  gui-lore:
+    - "&7Click to ban the user for cheating"
+  offence-1:
+    reason: "Cheating (1st Offence)"
+    length: "7d"
+    silent: true
+    type: "ban"
+  offence-2:
+    reason: "Cheating (2nd Offence)"
+    length: "13d"
+    silent: true
+    type: "ban"
+  offence-3:
+    reason: "Cheating (3rd Offence)"
+    length: "30d"
+    silent: true
+    type: "ban"
+
+innap-name:
+  gui-item: "DIAMOND_SWORD"
+  gui-name: "&cInappropriate Name"
+  gui-lore:
+    - "&7Click to ban the user for their username"
+  offence-1:
+    reason: "Inappropriate Name"
+    length: "perm"
+    silent: true
+    type: "ban"

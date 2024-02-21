@@ -1,0 +1,14 @@
+main:
+  title: "&8[&4!&8] &c&lPunish"
+  ban:
+    name: "&4&lBan"
+    lore: "&7Click to ban the user."
+  kick:
+    name: "&c&lKick"
+    lore: "&7Click to kick the user."
+  mute:
+    name: "&7&lMute"
+    lore: "&7Click to mute the user."
+  warn:
+    name: "&a&lWarn"
+    lore: "&7Click to warn the user."

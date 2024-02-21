@@ -1,0 +1,26 @@
+vulgar-language:
+  offence-1:
+    reason: "Vulgar Language (1st Offence)"
+    length: "30m"
+    silent: true
+    type: "mute"
+  offence-2:
+    reason: "Vulgar Language (2nd Offence)"
+    length: "1h"
+    silent: true
+    type: "mute"
+  offence-3:
+    reason: "Vulgar Language (3rd Offence)"
+    length: "1d"
+    silent: true
+    type: "mute"
+  offence-4:
+    reason: "Vulgar Language (4th Offence)"
+    length: "2d"
+    silent: true
+    type: "mute"
+  offence-5:
+    reason: "Vulgar Language (5th Offence)"
+    length: "5d"
+    silent: false
+    type: "mute"
