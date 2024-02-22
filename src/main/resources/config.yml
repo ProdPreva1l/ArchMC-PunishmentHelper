@@ -1,3 +1,10 @@
+mongo:
+  host: "127.0.0.1"
+  port: 27017
+  username: "username"
+  password: "supaSecretPassword"
+  dbName: "dbName"
+
 errors:
   player-not-found: "&c{0} has never joined before!"
   cant-punish: "&cYou cannot punish &7{0}&c!"

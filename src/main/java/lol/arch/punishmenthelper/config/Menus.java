@@ -6,8 +6,6 @@ import lol.arch.punishmenthelper.utils.BasicConfig;
 import lol.arch.punishmenthelper.utils.Text;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 
 import java.util.Collections;
 import java.util.List;

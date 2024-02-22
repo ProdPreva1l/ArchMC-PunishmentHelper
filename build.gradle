@@ -23,6 +23,8 @@ dependencies {
     compileOnly "org.github.paperspigot:paperspigot-api:1.8.8-R0.1-SNAPSHOT"
     implementation 'fr.mrmicky:FastInv:3.0.4'
 
+    implementation files('libs/SimpleMongoHelper.jar')
+
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 

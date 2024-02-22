@@ -21,3 +21,5 @@ warn:
   title: "&8[&4!&8] &c&lPunish &8\u00BB &4Warn"
 mute:
   title: "&8[&4!&8] &c&lPunish &8\u00BB &4Warn"
+confirm:
+  title: "&8[&4!&8] &c&lPunish &8\u00BB &aConfirm?"

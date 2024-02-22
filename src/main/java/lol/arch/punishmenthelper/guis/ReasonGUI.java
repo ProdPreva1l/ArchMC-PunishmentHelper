@@ -3,6 +3,7 @@ package lol.arch.punishmenthelper.guis;
 import fr.mrmicky.fastinv.FastInv;
 import lol.arch.punishmenthelper.PunishmentHelper;
 import lol.arch.punishmenthelper.config.Menus;
+import lol.arch.punishmenthelper.utils.BasicConfig;
 import lol.arch.punishmenthelper.utils.PunishmentType;
 import lol.arch.punishmenthelper.utils.Sound;
 import lol.arch.punishmenthelper.utils.exceptions.GuiButtonException;
@@ -23,23 +24,26 @@ public class ReasonGUI extends FastInv implements PaginatedInv {
     private final PunishmentType punishmentType;
 
     public ReasonGUI(PunishmentType punishmentType, String target, int page, FastInv previousGUI) {
-        super(27, Menus.BAN_GUI_TITLE.toFormattedString());
+        super(27, Menus.valueOf(punishmentType + "_GUI_TITLE").toFormattedString());
         this.page = page;
         this.target = target;
         this.previousGUI = previousGUI;
         this.punishmentType = punishmentType;
+
+
+        BasicConfig config = getConfig();
 
         try {
             for (int i = 0; i < maxItemsPerPage(); i++) {
                 index = maxItemsPerPage() * page() + i;
                 if (index >= list().size()) break;
                 String reason = list().get(index);
-                String itemName = PunishmentHelper.getBansFile().getString(reason + ".gui-name");
-                List<String> itemLore = PunishmentHelper.getBansFile().getStringList(reason + ".gui-lore");
-                Material material = Material.valueOf(PunishmentHelper.getBansFile().getString(reason + ".gui-item"));
+                String itemName = config.getString(reason + ".gui-name");
+                List<String> itemLore = config.getStringList(reason + ".gui-lore");
+                Material material = Material.valueOf(config.getString(reason + ".gui-item"));
                 setItem(index, GuiHelper.constructButton(GuiButtonType.GENERIC, material, itemName, itemLore), e -> {
                     Sound.click((Player) e.getWhoClicked());
-                    new FinalisePunishmentGUI(punishmentType, target, this);
+                    new FinalisePunishmentGUI(punishmentType, config, reason, target).open((Player) e.getWhoClicked());
                 });
             }
 
@@ -75,6 +79,19 @@ public class ReasonGUI extends FastInv implements PaginatedInv {
         }
     }
 
+    private BasicConfig getConfig() {
+        switch (punishmentType) {
+            case KICK:
+                return PunishmentHelper.getKicksFile();
+            case MUTE:
+                return PunishmentHelper.getMutesFile();
+            case WARN:
+                return PunishmentHelper.getWarnsFile();
+            default:
+                return PunishmentHelper.getBansFile();
+        }
+    }
+
 
     @Override
     public int page() {
@@ -88,15 +105,6 @@ public class ReasonGUI extends FastInv implements PaginatedInv {
 
     @Override
     public List<String> list() {
-        switch (punishmentType) {
-            case KICK:
-                return new ArrayList<>(PunishmentHelper.getKicksFile().getConfiguration().getKeys(false));
-            case MUTE:
-                return new ArrayList<>(PunishmentHelper.getMutesFile().getConfiguration().getKeys(false));
-            case WARN:
-                return new ArrayList<>(PunishmentHelper.getWarnsFile().getConfiguration().getKeys(false));
-            default:
-                return new ArrayList<>(PunishmentHelper.getBansFile().getConfiguration().getKeys(false));
-        }
+        return new ArrayList<>(getConfig().getConfiguration().getKeys(false));
     }
 }

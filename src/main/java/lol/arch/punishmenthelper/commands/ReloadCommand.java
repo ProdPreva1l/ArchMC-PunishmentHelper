@@ -11,12 +11,12 @@ public class ReloadCommand extends Command {
     @CommandArgs(name = "punishmenthelper-reload", aliases = {"ph-reload"}, permission = "punish.reload", inGameOnly = false, async = true)
     public void execute(CommandArguments command) {
         Player sender = command.getPlayer();
-        PunishmentHelper.i().getMenusFile().load();
-        PunishmentHelper.i().getConfigFile().load();
-        PunishmentHelper.i().getBansFile().load();
-        PunishmentHelper.i().getKicksFile().load();
-        PunishmentHelper.i().getWarnsFile().load();
-        PunishmentHelper.i().getMutesFile().load();
+        PunishmentHelper.getMenusFile().load();
+        PunishmentHelper.getConfigFile().load();
+        PunishmentHelper.getBansFile().load();
+        PunishmentHelper.getKicksFile().load();
+        PunishmentHelper.getWarnsFile().load();
+        PunishmentHelper.getMutesFile().load();
 
         sender.sendMessage(Text.message("&aConfig Reloaded!"));
     }

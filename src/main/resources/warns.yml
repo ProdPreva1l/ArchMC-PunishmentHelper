@@ -1,13 +1,9 @@
 false-report:
+  gui-item: "REDSTONE_BLOCK"
+  gui-name: "&cFalse Report"
+  gui-lore:
+    - "&7Click to warn the user for a false report"
   offence-1:
-    reason: "False Report (1st Offence)"
-    silent: true
-    type: "warn"
-  offence-2:
-    reason: "False Report (2nd Offence)"
-    silent: true
-    type: "warn"
-  offence-3:
-    reason: "False Report (3rd Offence)"
+    reason: "False Report"
     silent: true
     type: "warn"
