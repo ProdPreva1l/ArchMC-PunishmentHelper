@@ -22,7 +22,7 @@ public class OffenseHandler {
 
         Document data = getPlayerData(playerUUID, reason);
         if (data == null) {
-            Document doc = new Document("player", playerUUID).append("offense", offense).append("reason", reason);
+            Document doc = new Document("player", playerUUID.toString()).append("offense", offense).append("reason", reason);
             collectionHelper.insertDocument("punishment_handler", doc);
             return;
         }
@@ -37,17 +37,9 @@ public class OffenseHandler {
         return data.getInteger("offense");
     }
 
-    public FindIterable<Document> getPlayerData(UUID uuid) {
-        MongoCollection<Document> collection = collectionHelper.getCollection("punishment_handler");
-
-        Document filter = new Document("player", uuid);
-
-        return collection.find().filter(filter);
-    }
-
     public Document getPlayerData(UUID uuid, String reason) {
-        FindIterable<Document> playerData = getPlayerData(uuid);
-        Document filter = new Document("reason", reason);
-        return playerData.filter(filter).first();
+        MongoCollection<Document> collection = collectionHelper.getCollection("punishment_handler");
+        Document filter = new Document("reason", reason).append("player", uuid.toString());
+        return collection.find().filter(filter).first();
     }
 }
