@@ -51,7 +51,6 @@ spam:
     length: "3d"
     silent: true
 
-
 advertising:
   gui-item: SIGN
   gui-name: "&cAdvertising"

@@ -16,6 +16,7 @@ public enum Config {
     MONGO_USERNAME("mongo.username", "username"),
     MONGO_PASSWORD("mongo.password", "password"),
     MONGO_DB("mongo.database", "database"),
+    MONGO_AUTH_DB("mongo.auth-database", "authDatabase"),
     ERROR_NO_PERMISSION("errors.no-permission", "&cInsufficient Permission!"),
     ERROR_GENERIC("errors.generic", "&cAn error occurred! &7(Contact the Dev Team)");
 

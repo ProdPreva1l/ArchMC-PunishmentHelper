@@ -71,7 +71,7 @@ public final class PunishmentHelper extends JavaPlugin {
                 Config.MONGO_USERNAME.toString(),
                 Config.MONGO_PASSWORD.toString(),
                 Config.MONGO_DB.toString(),
-                "admin");
+                Config.MONGO_AUTH_DB.toString());
         this.cacheHandler = new CacheHandler(simpleMongoHelper);
         this.collectionHelper = new CollectionHelper(simpleMongoHelper, cacheHandler);
         if (collectionHelper.getCollection("punishment_handler") == null) {

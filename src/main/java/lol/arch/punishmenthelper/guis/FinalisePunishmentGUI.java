@@ -11,7 +11,6 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class FinalisePunishmentGUI extends FastInv {
     public FinalisePunishmentGUI(PunishmentType punishmentType, BasicConfig config, String reasonRaw, String target) {

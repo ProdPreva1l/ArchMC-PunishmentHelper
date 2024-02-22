@@ -9,10 +9,88 @@ cheating:
     silent: true
   offence-2:
     reason: "Cheating (2nd Offence)"
-    length: "13d"
+    length: "14d"
     silent: true
   offence-3:
     reason: "Cheating (3rd Offence)"
+    length: "21d"
+    silent: true
+  offence-4:
+    reason: "Cheating (3rd Offence)"
+    length: "28d"
+    silent: true
+  offence-5:
+    reason: "Cheating (3rd Offence)"
+    length: "perm"
+    silent: false
+
+major-bug-exploit:
+  gui-item: "DIAMOND_SWORD"
+  gui-name: "&cBug Exploiting (Major)"
+  gui-lore:
+    - "&7Click to ban the user for exploiting a major bug"
+  offence-1:
+    reason: "Exploiting (1st Offence)"
+    length: "7d"
+    silent: true
+  offence-2:
+    reason: "Exploiting (2nd Offence)"
+    length: "14d"
+    silent: true
+  offence-3:
+    reason: "Exploiting (3rd Offence)"
+    length: "21d"
+    silent: true
+  offence-4:
+    reason: "Exploiting (3rd Offence)"
+    length: "28d"
+    silent: true
+  offence-5:
+    reason: "Exploiting (3rd Offence)"
+    length: "perm"
+    silent: true
+
+minor-bug-exploit:
+  gui-item: "DIAMOND_SWORD"
+  gui-name: "&cBug Exploiting (Minor)"
+  gui-lore:
+    - "&7Click to ban the user for exploiting a minor bug"
+  offence-1:
+    reason: "Exploiting (1st Offence)"
+    length: "12h"
+    silent: true
+  offence-2:
+    reason: "Exploiting (2nd Offence)"
+    length: "1d"
+    silent: true
+  offence-3:
+    reason: "Exploiting (3rd Offence)"
+    length: "2d"
+    silent: true
+  offence-4:
+    reason: "Exploiting (3rd Offence)"
+    length: "4d"
+    silent: true
+  offence-5:
+    reason: "Exploiting (3rd Offence)"
+    length: "8d"
+    silent: true
+
+xray:
+  gui-item: "DIAMOND_SWORD"
+  gui-name: "&cXray"
+  gui-lore:
+    - "&7Click to ban the user for xray"
+  offence-1:
+    reason: "Xray (1st Offence)"
+    length: "7d"
+    silent: true
+  offence-2:
+    reason: "Xray (2nd Offence)"
+    length: "13d"
+    silent: true
+  offence-3:
+    reason: "Xray (3rd Offence)"
     length: "30d"
     silent: false
 
@@ -26,6 +104,16 @@ innap-name:
     length: "perm" # perm is permanent
     silent: true
 
+innap-skin:
+  gui-item: "DIAMOND_SWORD"
+  gui-name: "&cInappropriate Skin"
+  gui-lore:
+    - "&7Click to ban the user for their skin"
+  offence-1:
+    reason: "Inappropriate Skin"
+    length: "perm" # perm is permanent
+    silent: true
+
 staff-impersonation: # the id must be unique as its stored in the db
   gui-item: "WOOL"
   gui-name: "&cStaff Impersonation"
@@ -35,3 +123,13 @@ staff-impersonation: # the id must be unique as its stored in the db
     reason: "Staff Impersonation"
     length: "perm" # perm is permanent
     silent: true
+
+irl-scam:
+  gui-item: "WOOL"
+  gui-name: "&cIRL Scam"
+  gui-lore:
+    - "&7Click to ban the user for irl scamming"
+  offence-1:
+    reason: "IRL Scam"
+    length: "perm"
+    silent: false

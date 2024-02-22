@@ -11,7 +11,7 @@ public class CommandBuilder {
             case MUTE:
                 command = command.replace("{0}","mute {4}");
             case KICK:
-                command = command.replace("{0}","kick {4}");
+                command = command.replace("{0}","kick");
             case BAN:
                 command = command.replace("{0}","ban {4}");
         }
@@ -23,7 +23,7 @@ public class CommandBuilder {
             case MUTE:
                 command = command.replace("{0}","mute {4}");
             case KICK:
-                command = command.replace("{0}","kick {4}");
+                command = command.replace("{0}","kick");
             case BAN:
                 command = command.replace("{0}","ban {4}");
         }
