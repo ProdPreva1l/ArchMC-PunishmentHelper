@@ -22,17 +22,10 @@ public class PunishCommand extends Command {
             return;
         }
 
-        OfflinePlayer target = Bukkit.getOfflinePlayer(toPunish);
-        if (target.getPlayer() != null) {
-            if (target.getPlayer().hasPermission("litebans.exempt")) {
-                sender.sendMessage(Text.message(Config.ERROR_PLAYER_NONPUNISHABLE.toString(), target.getPlayer().getName()));
-                return;
-            }
-        }
-
         try {
             new PunishGUI(sender, toPunish).open(sender);
         } catch (GuiButtonException e) {
+            sender.sendMessage(Config.ERROR_GENERIC.toFormattedString());
             e.printStackTrace();
         }
     }

@@ -16,9 +16,7 @@ public enum Config {
     MONGO_USERNAME("mongo.username", "username"),
     MONGO_PASSWORD("mongo.password", "password"),
     MONGO_DB("mongo.database", "database"),
-    ERROR_PLAYER_NOT_FOUND("errors.player-not-found", "&7{0} &chas never joined before!"),
     ERROR_NO_PERMISSION("errors.no-permission", "&cInsufficient Permission!"),
-    ERROR_PLAYER_NONPUNISHABLE("errors.cant-punish", "&cYou cannot punish &7{0}&c!"),
     ERROR_GENERIC("errors.generic", "&cAn error occurred! &7(Contact the Dev Team)");
 
     @Getter private final String path;

@@ -6,6 +6,4 @@ mongo:
   dbName: "dbName"
 
 errors:
-  player-not-found: "&c{0} has never joined before!"
-  cant-punish: "&cYou cannot punish &7{0}&c!"
   generic: "&cAn error occurred! &7(Contact the Dev Team)"

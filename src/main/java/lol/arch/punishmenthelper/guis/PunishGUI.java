@@ -24,7 +24,10 @@ public class PunishGUI extends FastInv {
     }
 
     private void placeButtons() throws GuiButtonException {
-        setItem(0, GuiHelper.constructButton(GuiButtonType.CLOSE), e -> e.getWhoClicked().closeInventory());
+        setItem(0, GuiHelper.constructButton(GuiButtonType.CLOSE), e -> {
+            e.getWhoClicked().closeInventory();
+            Sound.fail(sender);
+        });
 
         setItem(1, GuiHelper.constructButton(GuiButtonType.GENERIC,
                 Material.EXPLOSIVE_MINECART,

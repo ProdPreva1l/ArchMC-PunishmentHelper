@@ -54,7 +54,7 @@ public class ReasonGUI extends FastInv implements PaginatedInv {
     private void placeNavButtons() throws GuiButtonException {
         // Close button
         setItem(getInventory().getSize() - 5, GuiHelper.constructButton(GuiButtonType.CLOSE), e -> {
-            Sound.click((Player) e.getWhoClicked());
+            Sound.fail(((Player) e.getWhoClicked()));
             e.getWhoClicked().closeInventory();
         });
 

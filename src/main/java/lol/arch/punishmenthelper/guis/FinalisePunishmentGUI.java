@@ -4,10 +4,7 @@ import fr.mrmicky.fastinv.FastInv;
 import fr.mrmicky.fastinv.ItemBuilder;
 import lol.arch.punishmenthelper.config.Menus;
 import lol.arch.punishmenthelper.database.OffenseHandler;
-import lol.arch.punishmenthelper.utils.BasicConfig;
-import lol.arch.punishmenthelper.utils.CommandBuilder;
-import lol.arch.punishmenthelper.utils.PunishmentType;
-import lol.arch.punishmenthelper.utils.Text;
+import lol.arch.punishmenthelper.utils.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -20,9 +17,6 @@ public class FinalisePunishmentGUI extends FastInv {
 
         UUID targetUUID = Bukkit.getOfflinePlayer(target).getUniqueId();
         int offense = OffenseHandler.getPlayerPunishment(targetUUID, reasonRaw);
-
-        Bukkit.broadcastMessage(config.getString(reasonRaw + ".offence-" + offense + ".reason"));
-        Bukkit.broadcastMessage(reasonRaw + ".offence-" + offense + ".reason");
 
         boolean addNewPunishment;
         if (config.getString(reasonRaw + ".offence-" + offense + ".reason").equalsIgnoreCase(reasonRaw + ".offence-" + offense + ".reason")) {
@@ -42,6 +36,7 @@ public class FinalisePunishmentGUI extends FastInv {
                         .lore(Text.message("&7Click to cancel interaction.")).build(),e-> {
                     e.getWhoClicked().closeInventory();
                     e.getWhoClicked().sendMessage(Text.message("&cPunishment Cancelled"));
+                    Sound.fail(((Player) e.getWhoClicked()));
                 });
 
         setItems(new int[]{3, 4, 5, 12, 13, 14, 21, 22, 23},
@@ -63,6 +58,7 @@ public class FinalisePunishmentGUI extends FastInv {
                                     .silent(silent)
                                     .build());
                     if (addNewPunishment) OffenseHandler.addPlayerPunishment(targetUUID, reasonRaw);
+                    Sound.levelUp(((Player) e.getWhoClicked()).getPlayer());
                 });
     }
 }
