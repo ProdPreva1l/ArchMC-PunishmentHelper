@@ -1,26 +1,63 @@
 vulgar-language:
+  gui-item: SIGN
+  gui-name: "&cVulgar Language"
+  gui-lore:
+    - "&7Click to mute user for vulgar language"
   offence-1:
     reason: "Vulgar Language (1st Offence)"
-    length: "30m"
-    silent: true
-    type: "mute"
-  offence-2:
-    reason: "Vulgar Language (2nd Offence)"
-    length: "1h"
-    silent: true
-    type: "mute"
-  offence-3:
-    reason: "Vulgar Language (3rd Offence)"
-    length: "1d"
-    silent: true
-    type: "mute"
-  offence-4:
-    reason: "Vulgar Language (4th Offence)"
     length: "2d"
     silent: true
-    type: "mute"
+  offence-2:
+    reason: "Vulgar Language (2nd Offence)"
+    length: "4d"
+    silent: true
+  offence-3:
+    reason: "Vulgar Language (3rd Offence)"
+    length: "5d"
+    silent: true
+  offence-4:
+    reason: "Vulgar Language (4th Offence)"
+    length: "7d"
+    silent: true
   offence-5:
     reason: "Vulgar Language (5th Offence)"
-    length: "5d"
+    length: "14d"
     silent: false
-    type: "mute"
+  # there can be as many or as little offenses, as long as there is at least 1
+
+spam:
+  gui-item: REDSTONE
+  gui-name: "&cSpam"
+  gui-lore:
+    - "&7Click to mute user for spamming"
+  offence-1:
+    reason: "Spamming"
+    length: "30m"
+    silent: true
+  offence-2:
+    reason: "Spamming"
+    length: "12h"
+    silent: true
+  offence-3:
+    reason: "Spamming"
+    length: "1d"
+    silent: true
+  offence-4:
+    reason: "Spamming"
+    length: "2d"
+    silent: true
+  offence-5:
+    reason: "Spamming"
+    length: "3d"
+    silent: true
+
+
+advertising:
+  gui-item: SIGN
+  gui-name: "&cAdvertising"
+  gui-lore:
+    - "&7Click to mute user for advertising"
+  offence-1:
+    reason: "Advertising"
+    length: "perm"
+    silent: true

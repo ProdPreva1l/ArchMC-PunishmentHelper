@@ -28,10 +28,16 @@ public enum Menus {
     WARN_BUTTON_LORE("main.warn.lore", Collections.singletonList("&7Click to warn the user.")),
     BACK_BUTTON_NAME("all.back.name", "&cGo Back"),
     BACK_BUTTON_LORE("all.back.lore", Collections.singletonList("&7Click to go back")),
-    PREVIOUS_BUTTON_NAME("all.back.name", "&cGo Back"),
-    PREVIOUS_BUTTON_LORE("all.back.name", Collections.singletonList("&7Click to go back")),
-    NEXT_BUTTON_NAME("all.back.lore", "&aNext Page"),
-    NEXT_BUTTON_LORE("all.back.lore", Collections.singletonList("&7Click to go back"))
+    PREVIOUS_BUTTON_NAME("all.previous_page.name", "&c&lPrevious Page"),
+    PREVIOUS_BUTTON_LORE("all.previous_page.lore", Collections.singletonList("&7Click to go to the previous page")),
+    NEXT_BUTTON_NAME("all.next_page.name", "&a&lNext Page"),
+    NEXT_BUTTON_LORE("all.next_page.lore", Collections.singletonList("&7Click to go to the next page")),
+    CLOSE_BUTTON_NAME("all.close.name", "&c&l✗ Close"),
+    CLOSE_BUTTON_LORE("all.close.lore", Collections.singletonList("&7Click to close the menu")),
+    CONFIRM_BUTTON_NAME("all.confirm.name", "&a&lCONFIRM"),
+    CONFIRM_BUTTON_LORE("all.confirm.lore", Collections.singletonList("&7Click to confirm")),
+    CANCEL_BUTTON_NAME("all.cancel.name", "&c&lCANCEL"),
+    CANCEL_BUTTON_LORE("all.cancel.lore", Collections.singletonList("&7Click to cancel")),
     ;
 
     @Getter private final String path;

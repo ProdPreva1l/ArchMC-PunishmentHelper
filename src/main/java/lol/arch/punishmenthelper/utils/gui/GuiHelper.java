@@ -1,6 +1,7 @@
 package lol.arch.punishmenthelper.utils.gui;
 
 import fr.mrmicky.fastinv.ItemBuilder;
+import lol.arch.punishmenthelper.config.Menus;
 import lol.arch.punishmenthelper.utils.Text;
 import lol.arch.punishmenthelper.utils.exceptions.GuiButtonException;
 import lombok.experimental.UtilityClass;
@@ -16,16 +17,16 @@ public class GuiHelper {
         switch (type) {
             case CLOSE:
                 return new ItemBuilder(Material.BARRIER)
-                        .name(Text.message("&c&l\u2717 Close"))
-                        .lore(Text.message("&7Click to close the menu")).build();
+                        .name(Menus.CLOSE_BUTTON_NAME.toFormattedString())
+                        .lore(Menus.CLOSE_BUTTON_LORE.toLore()).build();
             case NEXT_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&a&lNext Page"))
-                        .lore(Text.message("&7Click to go to the next page")).build();
+                        .name(Menus.NEXT_BUTTON_NAME.toFormattedString())
+                        .lore(Menus.NEXT_BUTTON_LORE.toLore()).build();
             case PREVIOUS_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&c&lPrevious Page"))
-                        .lore(Text.message("&7Click to go to the next page")).build();
+                        .name(Menus.PREVIOUS_BUTTON_NAME.toFormattedString())
+                        .lore(Menus.PREVIOUS_BUTTON_LORE.toLore()).build();
             case GENERIC:
                 throw new GuiButtonException("Attempted to create a button with type \"GENERIC\" without required params.");
             default:
@@ -34,18 +35,22 @@ public class GuiHelper {
     }
     public ItemStack constructButton(GuiButtonType type, Material material, String name, List<String> lore) throws GuiButtonException {
         switch (type) {
+            case BACK:
+                return new ItemBuilder(Material.FEATHER)
+                        .name(Menus.BACK_BUTTON_NAME.toFormattedString())
+                        .lore(Menus.BACK_BUTTON_LORE.toLore()).build();
             case CLOSE:
                 return new ItemBuilder(Material.BARRIER)
-                        .name(Text.message("&c&l\u2717 Close"))
-                        .lore(Text.message("&7Click to close the menu")).build();
+                        .name(Menus.CLOSE_BUTTON_NAME.toFormattedString())
+                        .lore(Menus.CLOSE_BUTTON_LORE.toLore()).build();
             case NEXT_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&c&lNext Page"))
-                        .lore(Text.message("&7Click to go to the next page")).build();
+                        .name(Menus.NEXT_BUTTON_NAME.toFormattedString())
+                        .lore(Menus.NEXT_BUTTON_LORE.toLore()).build();
             case PREVIOUS_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&c&lPrevious Page"))
-                        .lore(Text.message("&7Click to go to the next page")).build();
+                        .name(Menus.PREVIOUS_BUTTON_NAME.toFormattedString())
+                        .lore(Menus.PREVIOUS_BUTTON_LORE.toLore()).build();
             case GENERIC:
                 return new ItemBuilder(material)
                         .name(name)

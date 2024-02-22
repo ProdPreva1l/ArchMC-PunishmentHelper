@@ -1,0 +1,8 @@
+illegal-client:
+  gui-item: "WOOL"
+  gui-name: "&cIllegal Client"
+  gui-lore:
+    - "&7Click to ban the user for using a disallowed client"
+  offence-1:
+    reason: "Illegal Client, Please change your client!"
+    silent: true

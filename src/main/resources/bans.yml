@@ -7,17 +7,14 @@ cheating:
     reason: "Cheating (1st Offence)"
     length: "7d"
     silent: true
-    type: "ban"
   offence-2:
     reason: "Cheating (2nd Offence)"
     length: "13d"
     silent: true
-    type: "ban"
   offence-3:
     reason: "Cheating (3rd Offence)"
     length: "30d"
-    silent: true
-    type: "ban"
+    silent: false
 
 innap-name:
   gui-item: "DIAMOND_SWORD"
@@ -26,6 +23,15 @@ innap-name:
     - "&7Click to ban the user for their username"
   offence-1:
     reason: "Inappropriate Name"
-    length: "perm"
+    length: "perm" # perm is permanent
     silent: true
-    type: "ban"
+
+staff-impersonation: # the id must be unique as its stored in the db
+  gui-item: "WOOL"
+  gui-name: "&cStaff Impersonation"
+  gui-lore:
+    - "&7Click to ban the user for impersonating a staff member"
+  offence-1:
+    reason: "Staff Impersonation"
+    length: "perm" # perm is permanent
+    silent: true

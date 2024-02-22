@@ -12,7 +12,7 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 public class PunishCommand extends Command {
-    @CommandArgs(name = "punish", permission = "punish.use", async = true)
+    @CommandArgs(name = "punish", permission = "punish.use")
     public void execute(CommandArguments command) {
         Player sender = command.getPlayer();
         String toPunish = command.getArgs().length != 0 ? command.getArgs()[0] : null;

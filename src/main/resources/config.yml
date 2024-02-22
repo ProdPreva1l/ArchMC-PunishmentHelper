@@ -3,7 +3,8 @@ mongo:
   port: 27017
   username: "username"
   password: "supaSecretPassword"
-  dbName: "dbName"
+  database: "dbName"
 
 errors:
   generic: "&cAn error occurred! &7(Contact the Dev Team)"
+  no-permission: '&cInsufficient Permission!'

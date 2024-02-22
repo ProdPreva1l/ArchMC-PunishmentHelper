@@ -23,3 +23,29 @@ mute:
   title: "&8[&4!&8] &c&lPunish &8\u00BB &4Warn"
 confirm:
   title: "&8[&4!&8] &c&lPunish &8\u00BB &aConfirm?"
+
+all:
+  close:
+    name: "&c&l✗ Close"
+    lore:
+      - "&7Click to close the menu"
+  back:
+    name: "&cGo Back"
+    lore:
+      - "&7Click to go back"
+  previous_page:
+    name: "&c&lPrevious Page"
+    lore:
+      - "&7Click to go to the previous page"
+  next_page:
+    name: "&a&lNext Page"
+    lore:
+      - "&7Click to go to the next page"
+  confirm:
+    name: "&a&lCONFIRM"
+    lore:
+      - "&7Click to confirm"
+  cancel:
+    name: "&c&lCANCEL"
+    lore:
+      - "&7Click to cancel"

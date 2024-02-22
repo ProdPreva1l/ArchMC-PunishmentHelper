@@ -6,4 +6,3 @@ false-report:
   offence-1:
     reason: "False Report"
     silent: true
-    type: "warn"
