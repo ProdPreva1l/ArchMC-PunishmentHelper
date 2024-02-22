@@ -14,12 +14,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class PunishmentHelper extends JavaPlugin {
     private static PunishmentHelper instance;
 
-    @Getter private BasicConfig configFile;
-    @Getter private BasicConfig menusFile;
-    @Getter private BasicConfig bansFile;
-    @Getter private BasicConfig kicksFile;
-    @Getter private BasicConfig mutesFile;
-    @Getter private BasicConfig warnsFile;
+    @Getter private static BasicConfig configFile;
+    @Getter private static BasicConfig menusFile;
+    @Getter private static BasicConfig bansFile;
+    @Getter private static BasicConfig kicksFile;
+    @Getter private static BasicConfig mutesFile;
+    @Getter private static BasicConfig warnsFile;
+
     @Getter private CommandManager commandManager;
 
     @Override

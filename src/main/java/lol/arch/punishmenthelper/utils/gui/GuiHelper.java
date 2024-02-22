@@ -17,15 +17,15 @@ public class GuiHelper {
             case CLOSE:
                 return new ItemBuilder(Material.BARRIER)
                         .name(Text.message("&c&l\u2717 Close"))
-                        .lore(Text.message("&7&Click to close the menu")).build();
+                        .lore(Text.message("&7Click to close the menu")).build();
             case NEXT_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&c&l\u2B9E Next Page"))
-                        .lore(Text.message("&7&Click to go to the next page")).build();
+                        .name(Text.message("&a&lNext Page"))
+                        .lore(Text.message("&7Click to go to the next page")).build();
             case PREVIOUS_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&c&l\u2B9C Previous Page"))
-                        .lore(Text.message("&7&Click to go to the next page")).build();
+                        .name(Text.message("&c&lPrevious Page"))
+                        .lore(Text.message("&7Click to go to the next page")).build();
             case GENERIC:
                 throw new GuiButtonException("Attempted to create a button with type \"GENERIC\" without required params.");
             default:
@@ -37,15 +37,15 @@ public class GuiHelper {
             case CLOSE:
                 return new ItemBuilder(Material.BARRIER)
                         .name(Text.message("&c&l\u2717 Close"))
-                        .lore(Text.message("&7&Click to close the menu")).build();
+                        .lore(Text.message("&7Click to close the menu")).build();
             case NEXT_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&c&l\u2B9E Next Page"))
-                        .lore(Text.message("&7&Click to go to the next page")).build();
+                        .name(Text.message("&c&lNext Page"))
+                        .lore(Text.message("&7Click to go to the next page")).build();
             case PREVIOUS_PAGE:
                 return new ItemBuilder(Material.ARROW)
-                        .name(Text.message("&c&l\u2B9C Previous Page"))
-                        .lore(Text.message("&7&Click to go to the next page")).build();
+                        .name(Text.message("&c&lPrevious Page"))
+                        .lore(Text.message("&7Click to go to the next page")).build();
             case GENERIC:
                 return new ItemBuilder(material)
                         .name(name)

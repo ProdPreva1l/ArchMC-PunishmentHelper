@@ -12,3 +12,12 @@ main:
   warn:
     name: "&a&lWarn"
     lore: "&7Click to warn the user."
+
+ban:
+  title: "&8[&4!&8] &c&lPunish &8\u00BB &4Ban"
+kick:
+  title: "&8[&4!&8] &c&lPunish &8\u00BB &4Kick"
+warn:
+  title: "&8[&4!&8] &c&lPunish &8\u00BB &4Warn"
+mute:
+  title: "&8[&4!&8] &c&lPunish &8\u00BB &4Warn"

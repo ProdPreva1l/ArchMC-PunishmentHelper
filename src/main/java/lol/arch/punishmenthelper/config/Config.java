@@ -20,7 +20,7 @@ public enum Config {
     @Getter private final Object defaultValue;
 
     public String toString() {
-        String str = PunishmentHelper.i().getConfigFile().getString(path);
+        String str = PunishmentHelper.getConfigFile().getString(path);
         if (str.equals(path)) {
             return defaultValue.toString();
         }
@@ -28,7 +28,7 @@ public enum Config {
     }
 
     public String toFormattedString() {
-        String str = PunishmentHelper.i().getConfigFile().getString(path);
+        String str = PunishmentHelper.getConfigFile().getString(path);
         if (str.equals(path)) {
             return Text.message(defaultValue.toString());
         }
@@ -36,7 +36,7 @@ public enum Config {
     }
 
     public List<String> toStringList() {
-        List<String> str = PunishmentHelper.i().getConfigFile().getStringList(path);
+        List<String> str = PunishmentHelper.getConfigFile().getStringList(path);
         if (str.isEmpty() || str.get(0).equals(path)) {
             return (List<String>) defaultValue;
         }
@@ -47,7 +47,7 @@ public enum Config {
     }
 
     public List<String> toLore() {
-        List<String> str = PunishmentHelper.i().getConfigFile().getStringList(path);
+        List<String> str = PunishmentHelper.getConfigFile().getStringList(path);
         if (str.isEmpty() || str.get(0).equals(path)) {
             return Text.lore((List<String>) defaultValue);
         }
@@ -70,7 +70,7 @@ public enum Config {
     }
 
     public static void loadDefault() {
-        BasicConfig configFile = PunishmentHelper.i().getConfigFile();
+        BasicConfig configFile = PunishmentHelper.getConfigFile();
 
         for (Config config : Config.values()) {
             String path = config.getPath();

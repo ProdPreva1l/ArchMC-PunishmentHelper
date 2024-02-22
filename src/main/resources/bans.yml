@@ -1,8 +1,3 @@
-reasons:
-  - "cheating"
-  - "innap-name"
-
-
 cheating:
   gui-item: "DIAMOND_SWORD"
   gui-name: "&cCheating"

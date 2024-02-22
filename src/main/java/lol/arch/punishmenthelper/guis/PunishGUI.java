@@ -2,6 +2,7 @@ package lol.arch.punishmenthelper.guis;
 
 import fr.mrmicky.fastinv.FastInv;
 import lol.arch.punishmenthelper.config.Menus;
+import lol.arch.punishmenthelper.utils.PunishmentType;
 import lol.arch.punishmenthelper.utils.Sound;
 import lol.arch.punishmenthelper.utils.exceptions.GuiButtonException;
 import lol.arch.punishmenthelper.utils.gui.GuiButtonType;
@@ -29,24 +30,33 @@ public class PunishGUI extends FastInv {
                 Material.EXPLOSIVE_MINECART,
                 Menus.BAN_BUTTON_NAME.toFormattedString(),
                 Menus.BAN_BUTTON_LORE.toLore()), e -> {
-            new BanGUI(sender, target, 0).open(sender);
+            new ReasonGUI(PunishmentType.BAN, target, 0, this).open(sender);
             Sound.click(sender);
         });
 
         setItem(2, GuiHelper.constructButton(GuiButtonType.GENERIC,
                 Material.REDSTONE_BLOCK,
                 Menus.KICK_BUTTON_NAME.toFormattedString(),
-                Menus.KICK_BUTTON_LORE.toLore()));
+                Menus.KICK_BUTTON_LORE.toLore()), e -> {
+            new ReasonGUI(PunishmentType.KICK, target, 0, this).open(sender);
+            Sound.click(sender);
+        });
 
         setItem(3, GuiHelper.constructButton(GuiButtonType.GENERIC,
                 Material.SIGN,
                 Menus.MUTE_BUTTON_NAME.toFormattedString(),
-                Menus.MUTE_BUTTON_LORE.toLore()));
+                Menus.MUTE_BUTTON_LORE.toLore()), e -> {
+            new ReasonGUI(PunishmentType.MUTE, target, 0, this).open(sender);
+            Sound.click(sender);
+        });
 
         setItem(4, GuiHelper.constructButton(GuiButtonType.GENERIC,
                 Material.THIN_GLASS,
                 Menus.WARN_BUTTON_NAME.toFormattedString(),
-                Menus.WARN_BUTTON_LORE.toLore()));
+                Menus.WARN_BUTTON_LORE.toLore()), e -> {
+            new ReasonGUI(PunishmentType.WARN, target, 0, this).open(sender);
+            Sound.click(sender);
+        });
     }
 
 }

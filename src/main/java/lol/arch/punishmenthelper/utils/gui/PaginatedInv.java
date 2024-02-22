@@ -1,6 +1,7 @@
 package lol.arch.punishmenthelper.utils.gui;
 
 import fr.mrmicky.fastinv.FastInv;
+import lol.arch.punishmenthelper.config.Menus;
 import lol.arch.punishmenthelper.utils.BasicConfig;
 import lol.arch.punishmenthelper.utils.exceptions.GuiButtonException;
 import org.bukkit.Material;
