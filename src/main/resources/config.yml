@@ -5,6 +5,11 @@ mongo:
   password: "supaSecretPassword"
   database: "dbName"
   auth-database: "authDb"
+
+messages:
+  punishment-cancelled: "&cPunishment Cancelled"
+  checking-punishments: "&cPlease wait checking previous punishments..."
+
 errors:
   generic: "&cAn error occurred! &7(Contact the Dev Team)"
   no-permission: '&cInsufficient Permission!'

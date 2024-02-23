@@ -1,23 +1,23 @@
 package lol.arch.punishmenthelper.database;
 
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Updates;
 import info.preva1l.CollectionHelper;
 import lol.arch.punishmenthelper.PunishmentHelper;
-import lol.arch.punishmenthelper.utils.TaskManager;
 import lombok.experimental.UtilityClass;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 @UtilityClass
 public class OffenseHandler {
     private final CollectionHelper collectionHelper = PunishmentHelper.i().getCollectionHelper();
 
     public void addPlayerPunishment(UUID playerUUID, String reason) {
-        int offense = getPlayerPunishment(playerUUID, reason);
+        CompletableFuture<Integer> future = OffenseHandler.getPlayerPunishment(playerUUID, reason);
+        int offense = future.join();
         offense += 1;
 
         Document data = getPlayerData(playerUUID, reason);
@@ -31,10 +31,12 @@ public class OffenseHandler {
         collectionHelper.updateDocument("punishment_handler", data, updates);
     }
 
-    public int getPlayerPunishment(UUID uuid, String reason) {
-        Document data = getPlayerData(uuid, reason);
-        if (data == null) return 1;
-        return data.getInteger("offense");
+    public CompletableFuture<Integer> getPlayerPunishment(UUID uuid, String reason) {
+        return CompletableFuture.supplyAsync(() -> {
+            Document data = getPlayerData(uuid, reason);
+            if (data == null) return 1;
+            return data.getInteger("offense");
+        });
     }
 
     public Document getPlayerData(UUID uuid, String reason) {
